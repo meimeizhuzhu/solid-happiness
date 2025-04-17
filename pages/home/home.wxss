@@ -1,0 +1,6 @@
+/* pages/home/home.wxss */
+.home{
+  background: blue;
+  width:750rpx;
+  height:300px;
+}

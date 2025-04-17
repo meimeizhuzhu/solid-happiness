@@ -1,0 +1,18 @@
+<!--pages/event/event.wxml-->
+<!-- <text>pages/event/event.wxml</text> -->
+
+<view>{{ str }}</view>
+<button  bindtap='btn'>修改数据</button>
+<view  wx:for='{{city}}' wx:key='index'>
+    {{ item }}
+    {{ index }}
+</view>
+
+<view  wx:if='{{city.length>0}}'>
+  <text  wx:for='{{city}}'>
+    {{ item }}
+  </text>
+</view>
+<view wx:else>
+  暂无数据...
+</view>

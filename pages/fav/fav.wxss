@@ -1,0 +1,27 @@
+/* pages/fav/fav.wxss */
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main > view {
+    flex:1;
+    text-align: center;
+}
+
+
+/* 设置父容器的宽度和高度 */
+.image-container {
+  width: 750rpx; /* 确保父容器宽度占满屏幕 */
+  height: 300px; /* 设置一个固定高度，或者根据需要调整 */
+  display: flex; /* 使用 Flexbox 布局 */
+  justify-content: center; /* 水平居中对齐 */
+  align-items: center; /* 垂直居中对齐 */
+}
+
+/* 设置图片的宽度和高度 */
+.image {
+  width: 100%; /* 图片宽度占满父容器 */
+  height: 100%; /* 图片高度占满父容器 */
+  object-fit: cover; /* 确保图片覆盖整个容器 */
+}

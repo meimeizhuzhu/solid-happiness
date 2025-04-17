@@ -1,0 +1,13 @@
+<!--pages/fav/fav.wxml-->
+<!-- <text>pages/fav/fav.wxml</text> -->
+<view class="main">
+  <view>1</view>
+  <view>2</view>
+  <view>3</view>
+  <view>4</view>
+  <view>5</view>
+</view>
+
+<view class="image-container">
+  <image src="http://localhost:3000/images/your-image.jpg" class="image" />
+</view>
