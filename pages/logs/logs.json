@@ -1,4 +1,8 @@
-{
-  "usingComponents": {
-  }
+ {
+    "navigationBarBackgroundColor":"#f0f0f0",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "微信日志演示",
+    "backgroundColor": "#00ffff",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh":true
 }

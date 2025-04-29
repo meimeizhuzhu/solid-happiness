@@ -1,0 +1,21 @@
+<!--pages/templates/swiper-template/swiper-template.wxml-->
+<!-- autoplay="true" 
+  interval="3000" 
+  indicator-dots="true"
+  indicator-color="rgba(0, 0, 0, .3)"
+  indicator-active-color="#000000" -->
+<template name='swiper'>
+  <swiper 
+  circular="{{circular}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  indicator-dots="true"
+  indicator-color="rgba(0, 0, 0, .3)"
+  indicator-active-color="#000000"
+ >
+    <swiper-item  wx:for='{{swiperList}}'wx:key='{{index}}'>
+        <image src='{{item.imgUrl}}' />
+    </swiper-item>
+</swiper>
+
+</template>

@@ -1,0 +1,13 @@
+<!--pages/list/list.wxml-->
+<!-- <text>pages/list/list.wxml</text> -->
+
+<!-- <view>
+    这是list页面
+    
+</view> -->
+<import src='/pages/templates/swiper-template/swiper-template.wxml' />
+<!-- 第一个轮播图 -->
+<template is='swiper' data="{{swiperList: swiperList, circular: circular, interval: interval, autoplay: autoplay}}"></template>
+<button bindtap='toFav'>去我们喜爱的乐园</button>
+<!-- 第二个轮播图 -->
+<template is='swiper' data="{{swiperList: swiperList2, circular: circular2, interval: interval2, autoplay: autoplay2}}"></template>

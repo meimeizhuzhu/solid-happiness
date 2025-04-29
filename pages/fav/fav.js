@@ -5,7 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    autoplay:true ,
+    interval:3000 ,
+    circular:true,
+       swiperList:[
+         {
+             id:0,
+             imgUrl:'http://localhost:3000/images/flower1.png'
+         },
+         {
+             id:1,
+             imgUrl:'http://localhost:3000/images/flower2.png'
+         },
+         {
+             id:2,
+             imgUrl:'http://localhost:3000/images/flower3.png'
+         }]
   },
 
   /**

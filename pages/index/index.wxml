@@ -1,4 +1,27 @@
 <!--index.wxml-->
+<!-- index.wxml -->
+<!-- pages/index/index.wxml -->
+
+<!-- pages/index/index.wxml -->
+
+  <!-- pages/index/index.wxml -->
+<!-- index.wxml -->
+
+
+<text bindtap='toEvent'>点击标签去活动中心：{{ title_name }}</text>
+
+
+  <!-- 直接循环数组，仅渲染 index=0 或 index=最后一位的项 -->
+  <view 
+    bindtap='toBackhome' 
+    wx:for='{{user}}' 
+    wx:key='index'
+    wx:if="{{index === user.length - 1}}"
+  >
+    <text>跟随索引：0-{{index}} 去HOME</text>
+  </view>
+
+   
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
     <view class="userinfo">

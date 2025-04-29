@@ -1,5 +1,5 @@
 <!--pages/fav/fav.wxml-->
-<!-- <text>pages/fav/fav.wxml</text> -->
+<text>荷塘月色</text>
 <view class="main">
   <view>1</view>
   <view>2</view>
@@ -11,3 +11,5 @@
 <view class="image-container">
   <image src="http://localhost:3000/images/your-image.jpg" class="image" />
 </view>
+<import src='/pages/templates/swiper-template/swiper-template.wxml' />
+<template is='swiper' data="{{swiperList,circular,interval,autoplay}}"></template>

@@ -1,0 +1,7 @@
+<!--pages/Backhome/Backhome.wxml-->
+<view class="Backhome">
+  <text> 欢迎VIP来到珠宝心灵家园的秘密宝藏基地 </text>
+  <block wx:for='{{listData}}' wx:key='index'>
+      <text>用户ID: {{item.id}} - 标题:{{item.title}}</text>
+  </block>
+</view>

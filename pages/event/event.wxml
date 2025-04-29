@@ -1,13 +1,15 @@
 <!--pages/event/event.wxml-->
 <!-- <text>pages/event/event.wxml</text> -->
-
+<text class="iconfont icon-ai219"></text>
 <view>{{ str }}</view>
 <button  bindtap='btn'>修改数据</button>
-<view  wx:for='{{city}}' wx:key='index'>
-    {{ item }}
-    {{ index }}
-</view>
-
+<block wx:for='{{city}}' wx:key='index'>
+  <view>{{ index }}</view>
+  <view>{{ item}}</view>
+</block>
+<text>
+   今年的开设线下课的城市：
+  </text>
 <view  wx:if='{{city.length>0}}'>
   <text  wx:for='{{city}}'>
     {{ item }}

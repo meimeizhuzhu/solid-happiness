@@ -1,17 +1,60 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/list/list",
     "pages/logs/logs",
+    "pages/Backhome/Backhome",
     "pages/event/event",
+    "pages/orders/orders",
+    "pages/my/my",
     "pages/fav/fav",
-    "pages/home/home"
-    
-   
+    "pages/more/more",
+    "pages/another/another",
+    "pages/templates/swiper-template/swiper-template"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarBackgroundColor": "#ffffff"
+    "backgroundTextStyle": "light", //表示深色背景上的浅色文字，适用于深色背景。
+    "navigationBarBackgroundColor": "#FFD700",
+    "navigationBarTitleText": "珠宝商学院",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "color": "#000000",
+    "selectedColor": "#A9A9A9",
+    "backgroundColor": "#D3D3D3",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/img/index.png",
+        "selectedIconPath": "/img/indexSelected.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "课程列表",
+        "iconPath": "/img/list.png",
+        "selectedIconPath": "/img/listSelected.png"
+      },
+      {
+        "pagePath": "pages/event/event",
+        "text": "活动",
+        "iconPath": "/img/activity.png",
+        "selectedIconPath": "/img/activitySelected.png"
+      },
+      {
+        "pagePath": "pages/orders/orders",
+        "text": "订单",
+        "iconPath": "/img/order.png",
+        "selectedIconPath": "/img/orderSelected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/img/my.png",
+        "selectedIconPath": "/img/mySelected.png"
+      }
+    ]
   },
   "style": "v2",
   "componentFramework": "glass-easel",
