@@ -10,10 +10,11 @@
     "pages/fav/fav",
     "pages/more/more",
     "pages/another/another",
-    "pages/templates/swiper-template/swiper-template"
+    "pages/templates/swiper-template/swiper-template",
+    "pages/templates/tabs-template"
   ],
   "window": {
-    "backgroundTextStyle": "light", //表示深色背景上的浅色文字，适用于深色背景。
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FFD700",
     "navigationBarTitleText": "珠宝商学院",
     "navigationBarTextStyle": "black"

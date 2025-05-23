@@ -1,1 +1,64 @@
 /* pages/orders/orders.wxss */
+
+.header-search {
+  /* background: #42bd56; */
+  background:#FFD700;
+  padding:10rpx 10rpx;
+}
+.search-main {
+  padding: 6rpx;
+ background: #fff;
+ border-radius:10rpx;
+ text-align:center ;
+ color:#ccc;
+ font-size:28rpx;
+ border: 1px solid rgb(255, 251, 0); /* 添加临时边框 */
+}
+.container {
+  margin-top:-180rpx;
+   /* 向上移动180rpx “我要动自己？”​​ → 用 margin-top/left*/
+}
+/* 内容区块 */
+.list-header{
+     display: flex;
+     justify-content: space-between;
+     /* padding: 20rpx 30rpx; */
+     font-size: 28rpx;
+
+}
+
+.header-title{
+  color: black ;
+
+ 
+}
+.header-content{
+  color:rgba(0, 128, 0, 0.849);
+  font-size:28rpx;
+  font-weight:bold;
+}
+
+.img-item{
+  width:600rpx;
+  display: flex;
+  background: red;
+  padding: 20rpx;
+}
+
+.item-logo{
+    width:230rpx;
+    height:250rpx;
+    border-radius: 10rpx;
+}
+
+.item-name{
+  text-align: center;
+  font-size: 28rpx;
+}
+.image-stars {
+ display: flex;
+}
+.image-stars image{
+  width:50rpx;
+  height:50rpx;
+}

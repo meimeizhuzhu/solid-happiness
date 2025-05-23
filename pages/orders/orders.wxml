@@ -1,2 +1,61 @@
 <!--pages/orders/orders.wxml-->
-<text>pages/orders/orders.wxml</text>
+<scroll-view class="scrollarea" scroll-y 
+  type="list" 
+  style="height: 100vh;"> 
+  <view  class='header-search'>
+      <view  class='search-main'>
+        <text class="iconfont icon-ai219"></text>
+        搜索
+      </view>
+  </view>
+
+  <view class='container'>
+    <view class='list'>
+        <view class='list-header'>
+            <view class='header-title'>影院热映</view>
+            <view class='header-content'>查看更多
+              <text class="iconfont icon-youjiantou"></text>
+            </view>
+        </view>
+        <view class='list-img'>
+          <view class='img-item'>
+              <image class='item-logo' src='/img/coffee.png'></image>
+              <view class='item-name'>电影名称</view>
+              <view  class='image-stars'>
+                  <image src='/img/star.png'></image>
+                  <image src='/img/star.png'></image>
+                  <image src='/img/star.png'></image>
+                  <image src='/img/star.png'></image>
+                  <image src='/img/star.png'></image>
+                  <text>7</text>
+              </view>
+          </view>
+          <view class='img-item'>
+              <image class='item-logo' src='/img/coffee.png'></image>
+              <view class='item-name'>电影名称</view>
+              <view  class='image-stars'>
+                  <image src='/img/star.png'></image>
+                  <image src='/img/star.png'></image>
+                  <image src='/img/star.png'></image>
+                  <image src='/img/star.png'></image>
+                  <image src='/img/star.png'></image>
+                  <text>7</text>
+              </view>
+          </view>
+          <view class='img-item'>
+              <image class='item-logo' src='/img/coffee.png'></image>
+              <view class='item-name'>电影名称</view>
+              <view  class='image-stars'>
+                  <image src='/img/star.png'></image>
+                  <image src='/img/star.png'></image>
+                  <image src='/img/star.png'></image>
+                  <image src='/img/star.png'></image>
+                  <image src='/img/star.png'></image>
+                  <text>7</text>
+              </view>
+          </view>
+      </view>
+  </view>
+  </view>
+
+</scroll-view>

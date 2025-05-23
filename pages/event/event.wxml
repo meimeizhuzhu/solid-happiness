@@ -1,20 +1,26 @@
 <!--pages/event/event.wxml-->
-<!-- <text>pages/event/event.wxml</text> -->
-<text class="iconfont icon-ai219"></text>
-<view>{{ str }}</view>
-<button  bindtap='btn'>修改数据</button>
+
+<view  class='header-search'>
+    <view  class='search-main'>
+      <text class="iconfont icon-ai219"></text>
+      搜索
+    </view>
+</view>
+<view class="str-view">{{ str }}</view>
+<button class="modify-btn" bindtap='btn'>修改数据</button>
 <block wx:for='{{city}}' wx:key='index'>
-  <view>{{ index }}</view>
-  <view>{{ item}}</view>
+    <view>{{ index+1 }}-{{item}}</view>
 </block>
+
 <text>
    今年的开设线下课的城市：
-  </text>
-<view  wx:if='{{city.length>0}}'>
-  <text  wx:for='{{city}}'>
-    {{ item }}
-  </text>
+</text>
+<view wx:for="{{city}}" wx:key="index" wx:if="{{index < 3}}">
+  <text>{{index + 1}}-{{item}}</text>
 </view>
-<view wx:else>
-  暂无数据...
-</view>
+
+<!-- <view   wx:for='{{city}}' wx:key='index'>
+  <text wx:if="{{index < 3}}">
+    {{index + 1}}-{{item}}
+  </text>
+</view> -->

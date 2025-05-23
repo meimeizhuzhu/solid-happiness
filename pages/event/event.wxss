@@ -1,1 +1,24 @@
 /* pages/event/event.wxss */
+.header-search {
+  /* background: #42bd56; */
+  background:#FFD700;
+  padding:10rpx 10rpx;
+}
+.search-main {
+  padding: 6rpx;
+ background: #fff;
+ border-radius:10rpx;
+ text-align:center ;
+ color:#ccc;
+ font-size:32rpx;
+ border: 1px solid rgb(255, 251, 0); /* 添加临时边框 */
+}
+/* 假设给渲染 {{str}} 的 view 添加一个特定的类名，比如 str-view */
+.str-view {
+  padding-top: 10rpx; /* 可根据实际情况调整该值 */
+  text-align: center;
+}
+.modify-btn {
+  margin-top: 5rpx;
+}
+
