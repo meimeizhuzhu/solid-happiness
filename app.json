@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/​Composite_Chart/​Composite_Chart",
+    "pages/older_twin/older_twin",
+    "pages/younger_twin/younger_twin",
+    "pages/fav/fav",
+    "pages/more/more",
+    "pages/another/another",
+    "pages/logs/logs",
+    "pages/Backhome/Backhome",
+  
+    "pages/templates/swiper-template/swiper-template",
+    "pages/templates/tabs-template"
+
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于定位服务"
+    }
+  },
+  "window": {
+    "navigationStyle": "custom"
+  
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "color": "#000000",
+    "selectedColor": "#A9A9A9",
+    "backgroundColor": "#D3D3D3",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "男/A",
+        "iconPath": "/img/index.png",
+        "selectedIconPath": "/img/indexSelected.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "女/B",
+        "iconPath": "/img/list.png",
+        "selectedIconPath": "/img/listSelected.png"
+      },
+      {
+        "pagePath": "pages/​Composite_Chart/​Composite_Chart",
+        "text": "夫妻(AB)合盘",
+        "iconPath": "/img/activity.png",
+        "selectedIconPath": "/img/activitySelected.png"
+      },
+      {
+        "pagePath": "pages/older_twin/older_twin",
+        "text": "双胞胎(大)",
+        "iconPath": "/img/order.png",
+        "selectedIconPath": "/img/orderSelected.png"
+      },
+      {
+        "pagePath": "pages/younger_twin/younger_twin",
+        "text": "双胞胎(小)",
+        "iconPath": "/img/my.png",
+        "selectedIconPath": "/img/mySelected.png"
+      }
+    ]
+  },
+  
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

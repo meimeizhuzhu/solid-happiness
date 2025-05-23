@@ -1,0 +1,11 @@
+<!--pages/event/event.wxml-->
+<custom-navigation title="顺风顺水数字心学"></custom-navigation>
+<view  class='header-search'>
+    <view  class='search-main'>
+      <text class="iconfont icon-ai219"></text>
+      搜索
+    </view>
+</view>
+
+
+

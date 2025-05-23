@@ -1,0 +1,6 @@
+<!--pages/my.wxml-->
+<custom-navigation title="顺风顺水数字心学"></custom-navigation>
+<view class="container right-highlight">
+  <image src="/img/twins.png" mode="aspectFill" class="twin-image"></image>
+  <view class="birthday-info">小宝宝生日：{{youngerBirthday}}</view>
+</view>

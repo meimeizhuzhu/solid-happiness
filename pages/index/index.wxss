@@ -1,0 +1,335 @@
+/**index.wxss**/
+page {
+  --transition-duration: 0.4s;
+  transition: all var(--transition-duration) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollarea {
+  flex: 1;
+  overflow-y: auto;
+    pointer-events: auto;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  width: 80%;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  position: relative;
+   z-index: 999
+}
+
+.usermotto {
+  position: absolute;
+  top: 30rpx;
+  left: 100rpx;
+  color:#666
+}
+
+.avatar-wrapper {
+  padding: 0;
+  width: 56px !important;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+
+.nickname-wrapper {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  border-top: .5px solid rgba(0, 0, 0, 0.1);
+  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.nickname-label {
+  width: 105px;
+}
+
+.nickname-input {
+  flex: 1;
+}
+
+.container {
+  pointer-events: auto;
+}
+/* 右上角用户信息 */
+.user-corner {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.user-corner image {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.user-corner text {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 隐藏原显眼位置的头像 */
+.userinfo-avatar,
+.userinfo-nickname {
+  display: none !important;
+}
+
+.content-box {
+  display: flex; /* 启用 Flexbox 布局 */
+  align-items: center; /* 垂直居中对齐子元素 */
+  margin-top:-110rpx;
+}
+.content-box input {
+  border: 1px solid #ccc; 
+  width: 270rpx;
+  height: 50rpx;
+  margin-right: 14px; /* 输入框和按钮之间的间距 */
+  color: #000;
+}
+/* 圆弧形按钮 */
+.content-box .rounded-button {
+  /* min-width: 300rpx;
+  min-height: 80rpx; */
+  line-height: 80rpx; /* 文字垂直居中 */
+  z-index: 100; /* 确保按钮在最上层 */
+  padding: 1rpx 2rpx;
+  border-radius: 20px; /* 圆角 */
+  background-color: #4CAF50; /* 按钮背景颜色 */
+  color: white; /* 文字颜色 */
+  cursor: pointer; /* 鼠标悬停时的指针样式 */
+  width: 400rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+.content-box .rounded-button:focus {
+  outline: 1px solid blue; /* 默认焦点轮廓线 */
+}
+/* 容器定位 */
+.show-box {
+  margin-top:10rpx;
+  display: flex; /* 启用 Flexbox 布局 */
+  align-items: center; /* 垂直居中对齐子元素 */
+}
+
+.content-result {
+  padding: 5rpx 0rpx;
+  color: #000;   
+  font-weight: bold; 
+  margin-right: 0rpx;
+}
+.calendar-result{
+  color: #000;   
+}
+/* 基础表格样式（保持原样） */
+.table {
+position:relative;
+}
+.tr {
+  display: flex;
+}
+.td {
+  flex: 1;
+  padding: 4rpx;
+  border: 1rpx solid #e0e0e0;
+  text-align: center;
+  min-height: 60rpx;
+  min-width: 62rpx;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 26rpx;
+}
+
+.tableData_row {
+  position:relative;
+    margin-top:40rpx;
+    margin-left: 5rpx;
+    width: 115%;
+    border-collapse: collapse;
+    background-color: #fff; 
+    margin-bottom: 50rpx;
+  
+  }
+.tr2 {
+  display: flex;
+  
+}
+.td2 {
+  flex: 1;
+ 
+  border: 1rpx solid #e0e0e0;
+  padding: 4px  8px;
+  text-align: center;
+  vertical-align: middle;
+  min-height: 30rpx;
+  min-width: 30rpx;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 26rpx;
+
+}
+/* 第二列：宽度自适应文字 */
+.td2:nth-child(2) {
+  flex: none; /* 取消 flex 自动分配 */
+  width: 230rpx; /* 宽度由内容决定 */
+  white-space: nowrap; /* 防止文字换行 */
+  padding: 4px  8px;/* 增加左右内边距避免文字紧贴边框 */
+  text-align: center;
+  vertical-align: middle;
+}
+/* 精准定位6个特殊单元格（通过nth-of-type实现） */
+.tr:nth-of-type(1) .td:nth-of-type(3) > text,  /* [0][2] 太阳 */
+.tr:nth-of-type(2) .td:nth-of-type(1) > text,  /* [1][0] 日 */
+.tr:nth-of-type(4) .td:nth-of-type(1) > text,  /* [3][0] 月 */
+.tr:nth-of-type(6) .td:nth-of-type(1) > text,  /* [5][0] 年 */
+.tr:nth-of-type(8) .td:nth-of-type(1) > text,  /* [7][0] 年 */
+.tr:nth-of-type(9) .td:nth-of-type(3) > text { /* [8][2] 太阴 */
+  
+  border: none !important;
+  display: inline !important;
+  padding: 0 !important;
+  min-width: auto !important;
+  min-height: auto !important;
+  background: transparent !important;
+  font-size: 25rpx; /* 匹配图片中的文字大小 */
+  font-weight: bold; /* 匹配图片中的加粗效果 */
+  display: flex;
+  align-items: center;     /* 垂直居中 */
+  justify-content: center; /* 水平居中（可选） */
+ 
+
+}
+
+.tr:nth-child(5) .td:nth-child(6).td > text {
+  background-color:#ee5050; /* 仅圆形背景变红 */
+  color:white;         /* 文字颜色 */
+}
+
+.tr:nth-child(2) .td:nth-child(3).td > text {
+  background-color:#ffff05; /* 仅圆形背景变红 */
+  color:black;         /* 文字颜色 */
+
+}
+.tr:nth-child(4) .td:nth-child(3).td > text {
+  background-color:#ffff05; /* 仅圆形背景变红 */
+  color:black;         /* 文字颜色 */
+}
+
+.tr:nth-child(3) .td:nth-child(5).td > text {
+  background-color:#ffff05; /* 仅圆形背景变红 */
+  color:black;         /* 文字颜色 */
+}
+
+.tr:nth-child(6) .td:nth-child(3).td > text {
+  background-color: #c7f7c7; /* 仅圆形背景变红 */
+  color:black;         /* 文字颜色 */
+}
+
+.tr:nth-child(8) .td:nth-child(3).td > text {
+  background-color: #c7f7c7; /* 仅圆形背景变红 */
+  color:black;         /* 文字颜色 */
+}
+.tr:nth-child(7) .td:nth-child(5).td > text {
+  background-color: #c7f7c7; /* 仅圆形背景变红 */
+  color:black;         /* 文字颜色 */
+}
+
+/* 确保单元格背景透明 */
+.tr:nth-child(5) .td:nth-child(6) {
+  background-color: transparent !important; /* 单元格背景透明 */
+}
+.tr:nth-child(2) .td:nth-child(3) {
+  background-color: transparent !important; /* 单元格背景透明 */
+}
+.tr:nth-child(4) .td:nth-child(3) {
+  background-color: transparent !important; /* 单元格背景透明 */
+}
+.tr:nth-child(3) .td:nth-child(5) {
+  background-color: transparent !important; /* 单元格背景透明 */
+}
+.tr:nth-child(6) .td:nth-child(3) {
+  background-color: transparent !important; /* 单元格背景透明 */
+}
+.tr:nth-child(8) .td:nth-child(3) {
+  background-color: transparent !important; /* 单元格背景透明 */
+}
+.tr:nth-child(7) .td:nth-child(5) {
+  background-color: transparent !important; /* 单元格背景透明 */
+}
+
+
+/* 数字圆形样式（保持原样） */
+.td > text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50rpx;
+  min-height: 50rpx;
+  border-radius: 50%;
+  border: 0.5rpx solid #addfac;
+  font-weight: bold;
+}
+/* 新增：太阳位/太阴位合并样式 */
+
+
+/* 确保特殊文字不换行 */
+.special-text {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* 垂直线（第二列右侧） */
+.tr::after {
+  content: "";
+  position: absolute;
+  left: 18%; /* 第二列右侧位置（3列均分时） */
+  top: 64rpx;
+  bottom: 1rpx;
+  width: 1.5px;
+  height: 78%;
+  background: rgb(124, 207, 16);
+}
+
+/* 新增：腹部曲线圆弧 */
+/* 在原有垂直线代码下方添加 */
+/* 新增：以垂直线为直径的右半圆 */
+.tr::before {
+  content: "";
+  position: absolute;
+  left: 18%; /* 圆弧的左边距，相对于父元素的宽度 */
+  top: 62rpx; /* 圆弧的顶部外边距，您可以根据需要调整这个值 */
+  width: 73%; /* 圆弧直径，就是肚子的大小，根据需要调整 */ /* 圆弧的宽度，这里设置为父元素宽度的73% */
+  height: 78%; /* 圆弧高度，与垂直线相同 *//* 圆弧的高度，这里设置为父元素高度的77% */
+  border: 1px solid rgb(124, 207, 16);
+  border-radius: 40%; /* 创建半圆形 */
+  clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%); /* 裁剪出右半圆 */
+  transform: translateX(-50%); /* 使圆弧中心与垂直线对齐 */
+}

@@ -1,0 +1,18 @@
+/* pages/Backhome/Backhome.wxss */
+
+.Backhome{
+  background: white;
+  width:750rpx;
+  height:300px;
+  text-align: center;
+}
+
+/* pages/Backhome/Backhome.wxss */
+.Backhome text {
+  display: block; /* 使每个 <text> 元素独占一行 */
+  margin-bottom: 10px; /* 添加一些底部外边距 */
+  text-align:left
+}
+.list-item {
+  margin-bottom: 10px; /* 为每个列表项添加底部外边距 */
+}

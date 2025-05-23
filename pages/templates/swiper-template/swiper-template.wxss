@@ -1,0 +1,18 @@
+/* pages/templates/swiper-template/swiper-template.wxss */
+
+swiper{
+  width: 750rpx;
+  height: 300px;
+ 
+}
+swiper-item {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-item image {
+  width: 100%;
+  height: 100%; /* 确保图片高度也拉伸 */
+  object-fit: fill; /* 拉伸图片以填充整个容器 */
+
+}

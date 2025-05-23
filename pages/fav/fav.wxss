@@ -1,0 +1,67 @@
+/* pages/fav/fav.wxss */
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main > view {
+    flex:1;
+    text-align: center;
+}
+.image-container {
+  width: 100%;
+  height: 200px; /* 示例高度，可根据需要调整 */
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+.image {
+  width: 200px; /* 示例宽度，可按需调整 */
+  height: 200px; /* 示例高度，可按需调整 */
+  object-fit: cover; /* 使图片保持纵横比并覆盖整个容器 */
+}
+@import '/pages/templates/swiper-template/swiper-template.wxss';
+
+
+/* 设置父容器的宽度和高度 */
+.image-container {
+  width: 750rpx; /* 确保父容器宽度占满屏幕 */
+  height: 300px; /* 设置一个固定高度，或者根据需要调整 */
+  display: flex; /* 使用 Flexbox 布局 */
+  justify-content: center; /* 水平居中对齐 */
+  align-items: center; /* 垂直居中对齐 */
+}
+
+
+/* 设置图片的宽度和高度 */
+.image {
+  width: 100%; /* 图片宽度占满父容器 */
+  height: 100%; /* 图片高度占满父容器 */
+  object-fit: cover; /* 确保图片覆盖整个容器 */
+}
+
+.return {
+  position: fixed; /* 固定定位，确保按钮在视窗内的位置 */
+  bottom: 100rpx; /* 距离底部的距离 */
+  left: 20rpx; /* 距离左侧的距离 */
+  width: auto; /* 宽度自适应 */
+  display: flex;
+  justify-content: flex-start; /* 确保容器左对齐 */
+  align-items: center; /* 垂直居中对齐 */
+  padding: 4rpx 2rpx
+ 
+}
+
+.return-button {
+ 
+  height: 48rpx; 
+  width: 150rpx; /* 确保宽度足够显示文字 */
+  
+  text-align: center;
+  background-color: green;
+  font-weight: normal; /* 文字不加粗 */
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  border-radius: 8rpx; /* 可选：增加圆角 */
+}

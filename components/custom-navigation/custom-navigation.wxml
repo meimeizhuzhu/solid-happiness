@@ -1,0 +1,6 @@
+<!--components/custom-navigation.wxml-->
+<view class="custom-navigation">
+  <view class="navigation-title">{{ title }}</view>
+</view>
+
+

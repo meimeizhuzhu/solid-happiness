@@ -1,0 +1,4 @@
+/* components/custom-background/custom-background.wxss */
+.custom-background-style {
+  background-color: #f8f8f8; /* 自定义背景颜色 */
+}

@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<custom-navigation title="顺风顺水数字心学"></custom-navigation>
+<scroll-view class="scrollarea" scroll-y 
+  type="list" 
+  style="height: 500rpx;"> 
+  <view class="container">
+    <view class="userinfo">
+      <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
+        <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+          <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+        </button>
+        <view class="nickname-wrapper">
+          <text class="nickname-label">昵称</text>
+          <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" />
+        </view>
+      </block>
+      <block wx:elif="{{!hasUserInfo}}">
+        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+        <view wx:else> 请使用2.10.4及以上版本基础库 </view>
+      </block>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <view class="usermotto">
+          <text class="user-motto">{{motto}}</text>
+        </view>   
+         <!-- 右上角用户信息 -->
+        <view class="user-corner">
+          <image src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+          <text>{{userInfo.nickName}}</text>
+        </view>
+           <!-- 登录后显示 -->
+           <View class="content-box">
+              <input placeholder="请输入姓名" bindinput="handleInput"/>
+              <picker 
+            mode="date" 
+            value="{{date}}"
+            fields="day"
+            start="{{startDate}}"
+            end="{{endDate}}"
+            bindchange="handleDateChange">
+            <button class="rounded-button">请选择公历(阳历)生日</button>
+              </picker>
+           </View>
+           <!-- 结果显示 -->
+       <view class="show-box">
+         <view class="content-result">{{inputValue}}</view>
+         <view class="calendar-result">生日是：{{date}}</view>   
+      </view> 
+      
+      <view class="table">
+        <block wx:for="{{tableData}}" wx:for-item="row" wx:key="rowIndex">
+          <view class="tr">
+            <block wx:for="{{row}}" wx:for-item="cell" wx:key="colIndex"> 
+              <view class="td">
+                <text 
+                  wx:if="{{(rowIndex==0&&colIndex==2) || (rowIndex==1&&colIndex==0) || (rowIndex==3&&colIndex==0) || (rowIndex==5&&colIndex==0) || (rowIndex==7&&colIndex==0) || (rowIndex==8&&colIndex==2)}}"
+                  class="special-text"
+                >{{cell}}</text>
+                   <!-- 非空数字单元格 -->
+                <text 
+                  wx:elif="{{cell !== '' && cell != null}}"
+                  class="number-circle"
+                >{{cell}}</text>
+              </view>
+            </block>
+          </view>
+        </block>
+      </view> 
+
+      <view class="tableData_row">
+        <block wx:for="{{tableData_row}}" wx:for-item="row" wx:key="rowIndex">
+          <view class="tr2">
+            <block wx:for="{{row}}" wx:for-index="colIndex" wx:key="colIndex">
+              <view class="td2">
+          <!-- 显示行号 -->
+            <text wx:if="{{colIndex === 0}}" class="index-text">{{index + 1}}</text>
+          <!-- 非空数字单元格 -->
+          <text wx:else-if="{{item !== '' && item != null}}" class="number-normal">{{item}}</text>
+              </view>
+            </block>
+          </view>
+        </block>
+      </view> 
+
+      </block>
+    </view>  
+</view>
+</scroll-view>
+    
+     

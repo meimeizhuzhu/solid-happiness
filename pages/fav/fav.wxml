@@ -1,0 +1,22 @@
+<!--pages/fav/fav.wxml-->
+
+<custom-navigation title="顺风顺水数字心学"></custom-navigation>
+<text>荷塘月色</text>
+<view class="main">
+  <view>1</view>
+  <view>2</view>
+  <view>3</view>
+  <view>4</view>
+  <view>5</view>
+</view>
+
+<view class="image-container">
+  <image src="http://localhost:3000/images/your-image.jpg" class="image" />
+</view>
+<import src='/pages/templates/swiper-template/swiper-template.wxml' />
+<template is='swiper' data="{{swiperList,circular,interval,autoplay}}"></template>
+<view class>
+</view>
+<view class="return">
+    <button class="return-button" bindtap='toHomePage'>返回首页</button>
+</view>

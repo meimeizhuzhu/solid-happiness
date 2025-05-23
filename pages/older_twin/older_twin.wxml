@@ -1,0 +1,17 @@
+<!--pages/orders/orders.wxml-->
+<custom-navigation title="顺风顺水数字心学"></custom-navigation>
+
+<picker 
+  mode="date" 
+  value="{{date}}" 
+  fields="day"
+  start="{{startDate}}"
+  end="{{endDate}}"
+  bindchange="handleDateChange"  style="display: block; padding: 20rpx; background: #f5f5f5;">
+  <view>生日是：{{date}}</view>
+</picker>
+
+<view class="container left-highlight">
+  <image src="/img/twins.png" mode="aspectFill" class="twin-image"></image>
+  <view class="birthday-info">大宝宝生日：{{olderBirthday}}</view>
+</view>
