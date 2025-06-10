@@ -1,64 +1,159 @@
-/* pages/orders/orders.wxss */
-
-.header-search {
-  /* background: #42bd56; */
-  background:#FFD700;
-  padding:10rpx 10rpx;
-}
-.search-main {
-  padding: 6rpx;
- background: #fff;
- border-radius:10rpx;
- text-align:center ;
- color:#ccc;
- font-size:28rpx;
- border: 1px solid rgb(255, 251, 0); /* 添加临时边框 */
-}
-.container {
-  margin-top:-180rpx;
-   /* 向上移动180rpx “我要动自己？”​​ → 用 margin-top/left*/
-}
-/* 内容区块 */
-.list-header{
-     display: flex;
-     justify-content: space-between;
-     /* padding: 20rpx 30rpx; */
-     font-size: 28rpx;
-
+page {
+  width: 100vw; /* 明确宽度，避免潜在问题 */
+  height: 100vh;
+  background: violet;
+  overflow: hidden; 
 }
 
-.header-title{
-  color: black ;
-
- 
-}
-.header-content{
-  color:rgba(0, 128, 0, 0.849);
-  font-size:28rpx;
-  font-weight:bold;
-}
-
-.img-item{
-  width:600rpx;
+.page-container {
+  height: 100%;
+  width: 100%;
   display: flex;
-  background: red;
-  padding: 20rpx;
+  flex-direction: column;
+  background: white;
+
+}
+/* 顶部搜索栏 */
+.header-search {
+  position: sticky;   
+  /* 粘性定位 */
+  top: 0; 
+   /* 固定在顶部 */
+  z-index: 100;  
+  /* 确保在内容上方*/
+  background: green;
+    /* 背景色（建议用纯色避免遮挡） */
+  padding: 10rpx 20rpx;
 }
 
-.item-logo{
-    width:230rpx;
-    height:250rpx;
-    border-radius: 10rpx;
+.search-main {
+padding: 8rpx;
+background: #fff;
+border-radius: 10rpx;
+text-align: center;
+color: #ccc;
+font-size: 28rpx;
+border: 1px solid rgb(255, 251, 0);
 }
 
-.item-name{
-  text-align: center;
-  font-size: 28rpx;
+/* 主要内容容器*/
+.content-container {
+  overflow-x: hidden;
+  overflow-y: auto; 
+    width: 100%;
+    flex:1;
+    padding: 20rpx;
+    box-sizing: border-box;
+    background-color:white
+    /* 设置容器背景色 */
+
 }
+
+/* 内容区块 */
+.list {
+margin-bottom: 20rpx; /*为每个列表添加底部间距 */
+}
+
+.list-header {
+margin-top: 0rpx;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 5rpx 20rpx;
+font-size: 28rpx;
+margin-bottom: 10rpx;
+min-height: 60rpx;
+background-color: #fff; /* 白色背景 */
+border-radius: 10rpx; /* 圆角 */
+box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05); /*轻微阴影 */
+}
+
+.header-title {
+color: #333;
+font-weight: bold;
+white-space: nowrap;
+}
+
+.header-content {
+color:green;
+font-weight: bold;
+display: flex;
+align-items: center;
+white-space: nowrap;
+}
+
+.header-content text {
+font-size: 28rpx;
+margin-left: 5rpx;
+}
+
+/* 横向滚动容器 */
+.scroll-x-container {
+width: 100%; /*确保宽度为100% */
+height: 340rpx;
+box-sizing: border-box;
+overflow-x: auto;
+overflow-y: hidden;
+-webkit-overflow-scrolling: touch;
+/* background: blue; */
+
+}
+
+.list-img {
+  display: flex;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  height: 100%;
+  width: max-content; /* 关键：让内容宽度由子元素决定 */
+}
+
+/* 子元素 */
+.img-item {
+  display: inline-block; /* 横向排列 */
+  width: 200rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin: 0 5rpx;
+  padding: 10rpx;
+  height:330rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05);
+  vertical-align: top; /* 确保对齐 */
+
+
+}
+
+.item-logo {
+width: 100%;
+height: 240rpx;
+border-radius: 10rpx;
+display: block;
+object-fit: cover; /* 确保图片填充 */
+}
+
+.item-name {
+font-size: 24rpx;
+white-space: nowrap;
+margin-left: 0;
+text-align: center;
+overflow: hidden;
+text-overflow: ellipsis;
+padding-top: 5rpx;
+}
+
 .image-stars {
- display: flex;
+display: flex;
+justify-content: center;
+margin-top: 2rpx;
 }
-.image-stars image{
-  width:50rpx;
-  height:50rpx;
+
+.image-stars image {
+width: 36rpx;
+height: 36rpx;
+}
+
+.image-stars text {
+font-size: 24rpx;
+margin-left: 5rpx;
+margin-top: 2rpx;
 }

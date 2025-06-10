@@ -1,2 +1,14 @@
-<!--pages/my.wxml-->
-<text>pages/my.wxml</text>
+<view class="container">
+  <!-- 雪花元素将通过JS动态生成 -->
+  <view wx:for="{{snowflakes}}" wx:key="id" class="snowflake" 
+        style="left: {{item.x}}px; top: {{item.y}}px; font-size: {{item.size}}em; opacity: {{item.opacity}}; transform: translateX({{item.swayX}}px)">
+    {{item.char}}
+  </view>
+  
+  <!-- 控制按钮 -->
+  <view class="controls">
+    <button bindtap="addSnow">增加雪花</button>
+    <button bindtap="removeSnow">减少雪花</button>
+    <view class="counter">雪花数量: {{snowflakeCount}}</view>
+  </view>
+</view>

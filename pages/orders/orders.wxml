@@ -1,61 +1,42 @@
 <!--pages/orders/orders.wxml-->
-<scroll-view class="scrollarea" scroll-y 
-  type="list" 
-  style="height: 100vh;"> 
-  <view  class='header-search'>
-      <view  class='search-main'>
-        <text class="iconfont icon-ai219"></text>
-        搜索
-      </view>
-  </view>
-
-  <view class='container'>
-    <view class='list'>
-        <view class='list-header'>
-            <view class='header-title'>影院热映</view>
-            <view class='header-content'>查看更多
-              <text class="iconfont icon-youjiantou"></text>
-            </view>
+<view class="page-container">
+    <view  class='header-search'>
+        <view  class='search-main'>
+          <text class="iconfont icon-ai219"></text>
+          搜索
         </view>
-        <view class='list-img'>
-          <view class='img-item'>
-              <image class='item-logo' src='/img/coffee.png'></image>
-              <view class='item-name'>电影名称</view>
-              <view  class='image-stars'>
-                  <image src='/img/star.png'></image>
-                  <image src='/img/star.png'></image>
-                  <image src='/img/star.png'></image>
-                  <image src='/img/star.png'></image>
-                  <image src='/img/star.png'></image>
-                  <text>7</text>
-              </view>
-          </view>
-          <view class='img-item'>
-              <image class='item-logo' src='/img/coffee.png'></image>
-              <view class='item-name'>电影名称</view>
-              <view  class='image-stars'>
-                  <image src='/img/star.png'></image>
-                  <image src='/img/star.png'></image>
-                  <image src='/img/star.png'></image>
-                  <image src='/img/star.png'></image>
-                  <image src='/img/star.png'></image>
-                  <text>7</text>
-              </view>
-          </view>
-          <view class='img-item'>
-              <image class='item-logo' src='/img/coffee.png'></image>
-              <view class='item-name'>电影名称</view>
-              <view  class='image-stars'>
-                  <image src='/img/star.png'></image>
-                  <image src='/img/star.png'></image>
-                  <image src='/img/star.png'></image>
-                  <image src='/img/star.png'></image>
-                  <image src='/img/star.png'></image>
-                  <text>7</text>
-              </view>
-          </view>
-      </view>
-  </view>
-  </view>
+    </view>
 
-</scroll-view>
+    <view class='content-container'>
+      <view class='list'  wx:for='{{list}}'>  
+          <view class='list-header'>
+                <view class='header-title'>{{item.title}}</view>
+                <view class='header-content'>查看更多
+                    <text class="iconfont icon-youjiantou"></text>
+                </view>
+          </view>
+          <scroll-view class="scroll-x-container" scroll-x="true" scroll-y="false"
+          >
+          <view class='list-img'>
+            <view class='img-item' wx:for="{{imgList}}" wx:key="*this">
+                <image class='item-logo' src='{{item.src}}'></image>
+                <view class='item-name'>{{item.name}}</view>
+                <view  class='image-stars'>
+                  <block wx:for="{{item.stars}}" wx:key="index">
+                    <image src='/img/star.png' wx:if="{{item == 1}}"></image>
+                    <image src='/img/halfStar.png' wx:elif="{{item== 0.5}}"></image>
+                    <image src='/img/emptyStar.png' wx:else></image>
+                  </block>
+                    <text>{{item.rating}}</text>
+                </view>
+             </view>
+            
+            </view>
+          </scroll-view>
+       
+      </view>
+
+   
+    </view>
+
+  </view>

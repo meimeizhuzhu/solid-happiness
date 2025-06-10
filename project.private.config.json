@@ -3,7 +3,7 @@
   "projectname": "wx",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": true,
+    "urlCheck": false,
     "coverView": true,
     "lazyloadPlaceholderEnable": false,
     "skylineRenderEnable": false,
@@ -19,7 +19,7 @@
     "checkInvalidKey": true,
     "ignoreDevUnusedFiles": true
   },
-  "libVersion": "3.8.1",
+  "libVersion": "3.8.6",
   "condition": {
     "miniprogram": {
       "list": [

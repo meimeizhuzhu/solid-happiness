@@ -25,6 +25,12 @@ App({
   
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    url:"https://api.themoviedb.org",
+    nowplaying:"/3/movie/now_playing?api_key=a2cc34f2165a42ef9a7ce259a208366f&language=en-US&page=1",
+    popular:"/3/movie/popular?api_key=a2cc34f2165a42ef9a7ce259a208366f&language=en-US&page=1",
+    upcoming:"/3/movie/upcoming?api_key=a2cc34f2165a42ef9a7ce259a208366f&language=en-US&page=1",
+    toprated:"/3/movie/top_rated?api_key=a2cc34f2165a42ef9a7ce259a208366f&language=en-US&page=1",
+    search:"/3/search/keyword?api_key=a2cc34f2165a42ef9a7ce259a208366f&page=1"
   }
 })
